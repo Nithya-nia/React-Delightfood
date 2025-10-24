@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.img-fluid{
+    height: 85px;
+    width:85px;
+}
+.arrow {
+  border: solid  rgb(58, 58, 58);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+ 
+  
+}
+
+
+.dropdown:hover .dropdown-menu{
+  display:block;
+  
+}
+.dropdown.dropdown-menu{
+  display:none;
+}
+.cart_shoping{
+   border:none;
+   background-color: white;
+}
+.magnifying_glass{
+  border:none;
+   background-color: white;
+}
+
+  
+

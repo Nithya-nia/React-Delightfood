@@ -1,0 +1,14 @@
+.sort{
+    background-color:rgb(230, 175, 197) ;
+    width:20%;
+    
+}
+.sort_menu{
+    width:20%;
+}
+.add-to-cart-btn{
+    color:#fff ;
+    background-color: rgba(218,7,92);
+    border-color:rgba(218,7,92);
+    border-radius: 5px;
+}
