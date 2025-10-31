@@ -55,4 +55,6 @@
   -webkit-transform: rotate(15deg);
   opacity:0.5;
 }
-
+.rounded{
+    width:400px;
+}

@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+*{
+  font-size: 15px;
+}
 .img-fluid{
     height: 85px;
     width:85px;
@@ -30,6 +33,9 @@
 .magnifying_glass{
   border:none;
    background-color: white;
+}
+.ht{
+  margin-left: 20px;
 }
 
   

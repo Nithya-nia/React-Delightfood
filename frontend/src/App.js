@@ -4,7 +4,8 @@ import Snacks from './Pages/Snacks'
 import Sweet from './Pages/Sweet'
 import Pickel from './Pages/Pickel'
 import Login from './Pages/Login'
- import Signup from './Pages/Signup'
+import Signup from './Pages/Signup'
+import Masala from './Pages/Masala'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 function App() {
@@ -19,9 +20,11 @@ function App() {
       <Route path='/Snacks' element={<Snacks/>}/>
       <Route path='/Pickel' element={<Pickel/>}/>
       <Route path='/Login' element={<Login/>}/>
-       <Route path='/Signup' element={<Signup/>}/> 
+      <Route path='/Signup' element={<Signup/>}/> 
+      <Route path='/masala' element={<Masala/>}/>
     </Routes>
     </BrowserRouter>
+
 
   
     

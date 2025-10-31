@@ -16,11 +16,12 @@ const Navbar = () => {
 
                <button className="nav-link d-block d-lg-none magnifying_glass"><i className="fa-solid fa-magnifying-glass"></i></button>
                </div>   
-               <div className="col-4-sm ms-5">
-              <a className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" href="index.html"><img src={img} height="60px" width="60px"/></a></div>
-             <div className="col-4-sm d-flex flex-row gap-2 ms-5">
-              <a className="nav-link dropdown-toggle fw-bold d-block d-lg-none " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i className="fa-regular fa-user"></i>
+               <div className="col-4-sm ms-2">
+              <a className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" href="index.html"><img src={img} height="50px" width="60px"/></a>
+              </div>
+             <div className="d-flex flex-row gap-2">
+              <a className="nav-link dropdown-toggle fw-bold d-block d-lg-none  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i className="fa-regular fa-user ht"></i>
           </a>
           <ul className="dropdown-menu user"> 
            <li><a className="dropdown-item " href="#"/></li> <li><i className="fa-solid fa-arrow-right-to-bracket"></i>Log In</li>
@@ -35,7 +36,7 @@ const Navbar = () => {
                
                 <ul className= "navbar-nav pt-2 gap-3">
                    <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" to="/sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#sweet-section" aria-expanded="false">
+          <Link className="nav-link dropdown-toggle fw-bold" to="/Sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false" >
             SWEETS
             </Link>
           <ul className="dropdown-menu">
@@ -82,7 +83,7 @@ const Navbar = () => {
         </li>
 
     <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" href="Masalas" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link className="nav-link dropdown-toggle fw-bold" to="/masala" role="button" data-bs-toggle="nav-link dropdown-toggle" aria-expanded="false">
             MASALAS
           </Link>
           <ul className="dropdown-menu">
@@ -151,8 +152,8 @@ const Navbar = () => {
           
 
           <ul className="dropdown-menu ">
-           <li><Link className="dropdown-item " data-bs-toggle="dropdown-item" data-bs-target="#Login-section" to="/Login" role="button"><i className="fa-solid fa-arrow-right-to-bracket"></i>Log In</Link></li>
-           <li><Link className="dropdown-item" data-bs-toggle="dropdown-item" data-bs-target="#create_account-section" to="/signup"><i className="fa-solid fa-user-plus"></i>Create Account</Link></li>
+           <li><Link className="dropdown-item " data-bs-toggle="dropdown-item" data-bs-target="#Login-section" to="/Login" role="button"><i className="fa-solid fa-arrow-right-to-bracket"></i>Log In</Link></li> 
+           <li><Link className="dropdown-item" data-bs-toggle="dropdown-item" data-bs-target="#create_account-section" to="/signup"><i className="fa-solid fa-user-plus"></i>Create Account</Link></li> 
            </ul>
            </li>
            </ul>

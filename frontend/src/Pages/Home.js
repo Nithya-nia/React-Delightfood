@@ -467,14 +467,14 @@ const Home = () => {
   <h4 class="categories">TRENDING BLOGS</h4>
   <div class="row">
     <div class="col mt-3  ms-2">
-      <img class=" rounded" src={metha_pan} height="400px" weight="400px"/>
+      <img src={metha_pan} height="400px" width="350px"/>
     </div>
     <div class="col mt-3 ms-2">
-      <img  class=" rounded" src={sambar} height="400px" weight="400px"/>
+      <img src={sambar} height="400px" width="350px"/>
 
     </div>
     <div class="col mt-3 ms-2">
-      <img class=" rounded" src={tomato_thokku} height="400px" weight="400px"/>
+      <img src={tomato_thokku} height="400px" width="350px"/>
     </div>
   </div>
 
