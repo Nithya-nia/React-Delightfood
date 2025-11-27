@@ -28,7 +28,7 @@ const Navbar = () => {
            <li><a className="dropdown-item" href="#"/></li><li><i className="fa-solid fa-user-plus"></i>Create Account</li>
          </ul>
 
-           <button className="nav-link d-block d-lg-none cart_shoping"><i className="fa-solid fa-cart-shopping "></i></button>
+             <li className="nav-link d-block d-lg-none"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping "></i></Link></li>
         
             </div>
 
@@ -160,8 +160,8 @@ const Navbar = () => {
            </div>
         
            <div className="d-flex gap-2 mt-2 ">
-             <li className="nav-link"><button className="magnifying_glass"></button></li><i className="fa-solid fa-magnifying-glass"></i>
-             <li className="nav-link"><button className="magnifying_glass"></button></li><i className="fa-solid fa-cart-shopping "></i>
+             <li className="nav-link "><button className="magnifying_glass "></button></li><i className="fa-solid fa-magnifying-glass mt-1 gap-2"></i>
+             <li className="nav-link"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping "></i></Link></li>
                 
       
             

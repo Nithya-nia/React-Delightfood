@@ -19,6 +19,7 @@ const Masalaproducts=[
         muted:"Rs.420.00",
         button:"Add to Cart",
         star:[1,1,1,1,1],
+         quantity:1,
 
     },
     {
@@ -29,6 +30,7 @@ const Masalaproducts=[
         muted:"Rs.475.00",
         button:"Add to cart",
         star:[],
+         quantity:1,
 
     },
     {
@@ -37,8 +39,9 @@ const Masalaproducts=[
         title:"Mylapore Iyer Idli Chilly podi",
         rupees:"Rs.370.00",
         muted:"Rs.375.00",
-        button:"Add to Card",
+        button:"Add to Cart",
         star:[1,1,1,0,2],
+         quantity:1,
     },
     {
         id:4,
@@ -48,6 +51,7 @@ const Masalaproducts=[
         rupees:"Rs.289.00",
         muted:"Rs.289.00",
         button:"Add to cart",
+         quantity:1,
     },
     {
          id:5,
@@ -56,7 +60,8 @@ const Masalaproducts=[
         star:[1,1,1,1,1],
         rupees:"Rs.289.00",
         muted:"Rs.299.00",
-        button:"Add to cart,"
+        button:"Add to cart",
+         quantity:1,
     },
     {
          id:6,
@@ -66,36 +71,40 @@ const Masalaproducts=[
         rupees:"Rs.289.00",
         muted:"Rs.299.00",
         button:"Add to Cart",
+          quantity:1,
     },
     {
          id:7,
         image:rasampowder,
         title:"Iyengar Special Rasam masala Powder",
         star:[],
-
+         quantity:1,
         rupees:"Rs.289.00",
         muted:"Rs.299.00",
-        button:"Add to Cart"
+        button:"Add to Cart",
+        
     },
     {
          id:8,
         image:puliyogare,
         title:"Puliyogare gojju 500g",
         star:[],
-
+         quantity:1,
         rupees:"Rs.339.00",
         muted:"Rs.399.00",
         button:"Add to Cart",
+         
     },
     {
          id:9,
         image:paruppupodi,
         title:"Mylapore Iyer's Paruppu podi",
         star:[1,1,1,1,1],
-
+         quantity:1,
         rupees:"Rs.369.00",
         muted:"Rs.375.00",
         button:"Add to Cart",
+        
     },
     {
          id:10,
@@ -105,6 +114,7 @@ const Masalaproducts=[
         rupees:"Rs.290.00",
         muted:"Rs.300.00",
         button:"Add to Cart",
+         quantity:1,
     },
 ]
 

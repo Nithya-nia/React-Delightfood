@@ -10,18 +10,6 @@ import masala from '../Images/Assests/spices_1_1024x1024.png'
 import pickel from '../Images/Assests/pickles_1_1024x1024.png'
 import mukhwas from '../Images/Assests/mukhwas_2_1024x1024.png'
 import rice from '../Images/Assests/rice_1_1024x1024.png'
-import kesar from '../Images/Assests/Dry-Kesar-Petha-350g-lifestyle.jpg-1.webp'
-import calcutta from '../Images/Assests/Calcutta-Meetha-Paan-300gm-Lifestyle-1.webp'
-import petha from '../Images/Assests/Dry-Petha-350g-lifestyle.jpg1.jpeg'
-import banarasi from '../Images/Assests/Banarasi-Meetha-Paan-200gm-lifestyle-2.webp'
-import bk from '../Images/Assests/Beetroot-kanji-250ml.webp'
-import rk from '../Images/Assests/Radish-Kanji250ml_392478af-7409-4c5a-bed6-bf26f6a5e405.webp'
-import ss from '../Images/Assests/smoked-salt100g.webp'
-import gcl from '../Images/Assests/Green-chilli-lemon-salt.webp'
-import bikaneri from '../Images/Assests/Bikaneri-Bhujia-300gm-Pouch-Lifestyle.webp'
-import banana from '../Images/Assests/Nandran-Banan-Chips-200g-lifetyle.jpg-1.webp'
-import murukku from '../Images/Assests/Butter-Murukku-200g-Lifestyle.jpg-1.webp'
-import mix from '../Images/Assests/Green-chilli-lemon-salt.webp'
 import amazon from '../Images/Assests/AMAZON-1.webp'
 import flipkart from '../Images/Assests/flipkart.webp'
 import swiggy from '../Images/Assests/swiggy.webp'
@@ -39,18 +27,24 @@ import sambar from '../Images/Assests/iyenagar_sambar_masala.webp'
 import tomato_thokku from '../Images/Assests/iyenagar_sambar_masala.webp'
 import Navbar from '../component/Navbar'
 import Footer from '../component/Footer'
+import Card from '../Constant/Card.js'
+import Homeproducts from '../Constant/Homeproducts.js'
+import Newarrival from '../Constant/Newarrival.js'
+import Dailysnack from '../Constant/Dailysnack.js'
+
 
 
 const Home = () => {
+  
   return (
     <>
     <Navbar/>
-   <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
+   <div id="carouselExampleLight" className="carousel carousel-Dark slide" data-bs-ride="carousel">
   <div className="carousel-indicators md-12">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="btn_carousel active" aria-current="true" aria-label="Slide 1"></button>
-    <button className="btn_carousel " type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button className="btn_carousel " type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button className="btn_carousel " type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampledark" data-bs-slide-to="0" className="button-carousel active" aria-current="true" aria-label="Slide 1"></button>
+    <button className="button-carousel" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button className="button-carousel" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button className="button-carousel" type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
 
   </div>
   <div className="carousel-inner">
@@ -85,9 +79,9 @@ const Home = () => {
 <section>
   <div class="container">
      <h3 className="categories">CATEGORIES</h3>
-<div className=" container row row-cols-3 row-cols-md-6 ms-3">
+<div className=" container row row-cols-3 row-cols-md-6 ms-2">
   
-  <div className="col d-flex gap-1 pt-4 ">
+  <div className="col d-flex gap-4 pt-4 ">
     <div className="card h-100 card_style" >
       <img src={sweets} className="card-img-top-1 style" alt="..."/>
       <div className="card-body">
@@ -96,7 +90,7 @@ const Home = () => {
       </div>
     </div>
   </div>
-  <div className="col d-flex gap-3 pt-4">
+  <div className="col d-flex gap-1 pt-4">
     <div className="card h-100 card_style ">
       <img src={snacks} className="card-img-top-1 style" alt="..."/>
       <div className="card-body">
@@ -105,11 +99,11 @@ const Home = () => {
       </div>
     </div>
   </div>
-  <div className="col d-flex gap-2 pt-4">
+  <div className="col d-flex gap-1 pt-4">
     <div className="card h-100 card_style">
       <img src={masala}  className="card-img-top-1 style" alt="..."/>
       <div className="card-body">
-        <h5 className="card-title">Masala</h5>
+        <h5 className="card-title masala_cat">Masala</h5>
        
       </div>
     </div>
@@ -123,11 +117,11 @@ const Home = () => {
       </div>
     </div>
   </div>
-   <div className="col d-flex gap-3 pt-4">
+   <div className="col d-flex gap-5 pt-4">
     <div className="card h-100 card_style">
       <img src={mukhwas}  className="card-img-top-1 style" alt="..."/>
       <div className="card-body">
-        <h5 className="card-title">Mukhwas</h5>
+        <h5 className="card-title mukhwas">Mukhwas</h5>
         
       </div>
     </div>
@@ -148,57 +142,9 @@ const Home = () => {
 
 <section class="section-3 ">
   <h3 class="text-center pt-2 mt-2">MOST LOVED PRODUCTS</h3>
-  <div class="container">
-    <div class="card-group">
-  <div class="card border-0 ">
-    <img src={kesar}class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Kesar Dry petha 350g</h5>
-      <p class="card-text text-danger">RS.249.00 <del><small class="text-muted ">Rs.260.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2" >
-            Add to Cart
-          </button>
-    </div>
-  </div>
-  <div class="card border-0">
-     <img src={calcutta} class="card-img-top" alt="..."/>
-    <div class="card-body  text-center">
-       <h5 class="card-title">Calcutta Meetha paan</h5>
-       <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.229.00 <del><small class="text-muted ">Rs.280.00</small></del></p>
-      <div class="text-center">
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-          </div>
-    </div>
-
-  </div>
-  <div class="card border-0">
-    <img src={petha} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Dry Petha 350g</h5>
-      <p class="card-text text-danger">RS.215.00 <del><small class="text-muted ">Rs.220.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2" >
-            Add to Cart
-          </button>
-    </div>
-  </div>
-   <div class="card border-0">
-    <img src={banarasi} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Banarasi Meetha paan</h5>
-      <p class="card-text text-danger">RS.229.00 <del><small class="text-muted ">Rs.340.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-</div>
-  </div>
+   <Card data={Homeproducts}/>
+  
+ 
   <div class="text-center">
   <button type="submit" class="add-to-cart-btn m-3">
             View all
@@ -210,60 +156,8 @@ const Home = () => {
 
 <section class="section-4 ">
   <h3 class="text-center pt-2 mt-3">NEW ARRIVALS</h3>
-  <div class="container">
-    <div class="card-group">
-  <div class="card border-0 ">
-    <img src={bk} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Beetroot Kanji (250ml)</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.98.00 <del><small class="text-muted ">Rs.99.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-  <div class="card border-0">
-     <img src={rk} class="card-img-top" alt="..."/>
-    <div class="card-body  text-center">
-       <h5 class="card-title">Radish Kanji (250ml) </h5>
-       <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.98.00 <del><small class="text-muted ">Rs.99.00</small></del></p>
-      <div class="text-center">
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-          </div>
-    </div>
-
-  </div>
-  <div class="card border-0">
-    <img src={ss} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Smoked salt</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.98.00 <del><small class="text-muted ">Rs.99.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-   <div class="card border-0">
-    <img src={gcl} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Green Chilli Lemon -salt</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.98.00 <del><small class="text-muted ">Rs.99.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-</div>
-  </div>
+  <Card data={Newarrival}/>
+ 
   <div class="text-center">
   <button type="submit" class="add-to-cart-btn p-2 ">
             View all
@@ -276,60 +170,8 @@ const Home = () => {
 
 <section class="section-4 ">
   <h3 class="text-center pt-2 mt-3">DAILY SNACKS</h3>
-  <div class="container">
-    <div class="card-group">
-  <div class="card border-0 ">
-    <img src={bikaneri} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Bikaneri Bhujia 300g</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.299.00 <del><small class="text-muted ">Rs.300.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-  <div class="card border-0">
-     <img src={banana} class="card-img-top" alt="..."/>
-    <div class="card-body  text-center">
-       <h5 class="card-title">Nendran Banana Chips</h5>
-       <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.299.00 <del><small class="text-muted ">Rs.235.00</small></del></p>
-      <div class="text-center">
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-          </div>
-    </div>
-
-  </div>
-  <div class="card border-0">
-    <img src={murukku} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Butter Murukku</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.189.00 <del><small class="text-muted ">Rs.200.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-   <div class="card border-0">
-    <img src={mix} class="card-img-top" alt="..."/>
-    <div class="card-body text-center">
-       <h5 class="card-title">Masala Nut Mix 200g</h5>
-        <p><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i><i class="fa-solid fa-star text-success"></i>1 review</p>
-      <p class="card-text text-danger">RS.179.00 <del><small class="text-muted ">Rs.199.00</small></del></p>
-      
-      <button type="submit" class="add-to-cart-btn p-2">
-            Add to Cart
-          </button>
-    </div>
-  </div>
-</div>
-  </div>
+  <Card data={Dailysnack}/>
+ 
   <div class="text-center">
   <button type="submit" class="add-to-cart-btn p-2 ">
             View all

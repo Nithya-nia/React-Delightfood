@@ -1,8 +1,8 @@
-.btn_carousel{
-    height:10px;
-    width:10px;
+.button-carousel{
+    height:5px;
+    width:5px;
     border:solid;
-    border-radius: 50%;
+    border-radius:20%;
     background: grey;
     border-color: white;
 }
@@ -13,7 +13,7 @@
     border-radius: 40%;
     background: white;
     border-color: white;
-    margin-top: 250px;
+    margin-top: 200px;
     margin-left: 100px;
 }
 .btn_next{
@@ -23,21 +23,21 @@
     border-radius: 40%;
     background: white;
     border-color: white;
-    margin-top: 250px;
+    margin-top: 200px;
     margin-left: 100px;
 }
 .categories{
     display:flex;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 .card_style{
     justify-content: center;
     border:none;
 }
 .style{
-    height:100px;
-    width:100px;
+    height:80px;
+    width:80px;
     border:none;
 }
 .add-to-cart-btn{
@@ -58,3 +58,13 @@
 .rounded{
     width:400px;
 }
+ .masala_cat{
+width:60px;
+ }
+ .mukhwas{
+    width:82px;
+ }
+ .add-to-cart-btn:hover{
+     background-color: rgb(224, 143, 176);
+     border-color:rgb(224, 143, 176) ;
+ }

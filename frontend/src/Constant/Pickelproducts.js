@@ -11,77 +11,91 @@ import kothamalli from '../Images/Assests/tnm023_1.webp'
 
 const Pickelproducts = [
   {
-         id:1,
+         id:11,
          image:tomato,
          title:"Tomato Rice Mix 500g",
          rupee:"Rs.599.00",
          muted:"Rs.610.00",
          button:"Add to Cart",
          star:[1,1,1,1,1],
+         quantity:1,
  
      },
      {
-         id:2,
+         id:12,
          image:kolambu,
          title:"Mylapore Iyer's Vathakozhambu Thokku",
          rupee:"Rs.449.00",
          muted:"Rs.450.00",
          button:"Add to cart",
          star:[1,1,1,1,1],
+        quantity:1,
+
  
      },
      {
-          id:3,
+          id:13,
          image:mango,
          title:"Mango Thokku",
          rupee:"Rs.449.00",
          muted:"Rs.450.00",
          button:"Add to Card",
          star:[1,1,1,1,1],
+                  quantity:1,
+
      },
      {
-         id:4,
+         id:14,
          image:tn ,
          title:"Brinjal Thokku 500g",
          star:[1,1,1,1,1],
          rupee:"Rs.647.00",
          muted:"Rs.677.00",
          button:"Add to cart",
+                  quantity:1,
+
      },
      {
-          id:5,
+          id:15,
          image:tnm,
          title:"Bharwan lal Mirch Achaar 350g",
          star:[1,1,1,1,1],
          rupee:"Rs.250.00",
          muted:"Rs.299.00",
-         button:"Add to cart,"
+         button:"Add to cart",
+                  quantity:1,
+
      },
      {
-          id:6,
+          id:16,
          image:tnmo,
          title:"Pavakkai Thokku 500g",
          star:[1,1,1,1,1],
          rupee:"Rs.573.00",
          muted:"Rs.603.00",
          button:"Add to Cart",
+                  quantity:1,
+
      },
      {
-          id:7,
+          id:17,
          image:amla,
          title:"Iyengar Special Rasam masala Powder",
                 star:[1,1,1,1,1],
  
          rupee:"Rs.299.00",
          muted:"Rs.349.00",
-         button:"Add to Cart"
+         button:"Add to Cart",
+                  quantity:1,
+
      },
      {
-          id:8,
+          id:18,
          image:kothamalli,
          title:"Kothamalli Thokku 500g",
          star:[1,1,1,1,1],
- 
+          quantity:1,
+
          rupee:"Rs.585.00",
          muted:"Rs.600.00",
          button:"Add to Cart",

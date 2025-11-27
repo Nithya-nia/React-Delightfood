@@ -7,6 +7,8 @@ import Login from './Pages/Login'
 import Signup from './Pages/Signup'
 import Masala from './Pages/Masala'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Cartpage from './Pages/Cart'
+
 
 function App() {
   return (
@@ -22,8 +24,11 @@ function App() {
       <Route path='/Login' element={<Login/>}/>
       <Route path='/Signup' element={<Signup/>}/> 
       <Route path='/masala' element={<Masala/>}/>
+      <Route path='/cart' element={<Cartpage/>}/>
     </Routes>
     </BrowserRouter>
+
+    
 
 
   
