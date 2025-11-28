@@ -28,18 +28,18 @@ const Navbar = () => {
            <li><a className="dropdown-item" href="#"/></li><li><i className="fa-solid fa-user-plus"></i>Create Account</li>
          </ul>
 
-             <li className="nav-link d-block d-lg-none"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping "></i></Link></li>
+             <li className="nav-link d-block d-lg-none"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping user_icon"></i></Link></li>
         
             </div>
 
             <div className="collapse navbar-collapse ms-5" id="navbarNav">
                
-                <ul className= "navbar-nav pt-2 gap-3">
+                <ul className= "navbar-nav sweets pt-2 gap-5">
                    <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" to="/Sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false" >
+          <Link className="nav-link  fw-bold mt-2" to="/Sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false" >
             SWEETS
             </Link>
-          <ul className="dropdown-menu">
+          {/* <ul className="dropdown-menu">
      <li><a className="dropdown-item " href="#">JAGGERY SWEETS</a></li>
     <li><a className="dropdown-item" href="#">SUGAR FREE SWEETS</a></li>
     <li><a className="dropdown-item" href="#">LADDUS</a></li>
@@ -50,15 +50,16 @@ const Navbar = () => {
          <li><a className="dropdown-item" href="#">WINTER SWEETS</a></li>
           <li><a className="dropdown-item" href="#">HOLY SWEETS</a></li>
    </ul>
+   </li> */}
    </li>
 
    
        <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" to="/Snacks" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false">
+          <Link className="nav-link  fw-bold mt-2" to="/Snacks" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false">
             SNACKS
           </Link>
           
-          <ul className="dropdown-menu">
+          {/* <ul className="dropdown-menu">
            <li><a className="dropdown-item" href="#">ROASTED SNACKS</a></li>
     <li><a className="dropdown-item" href="#">MURUKKUS</a></li>
     <li><a className="dropdown-item" href="#">BANANA CHIPS</a></li>
@@ -67,26 +68,28 @@ const Navbar = () => {
        <li><a className="dropdown-item" href="#">TRADITIONAL SAVOURIES</a></li>
       
     </ul>
+    </li> */}
     </li>
         
        <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" to="/Pickel" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#pickels-section" aria-expanded="false">
+          <Link className="nav-link  fw-bold mt-2" to="/Pickel" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#pickels-section" aria-expanded="false">
             PICKLES
           </Link>
-          <ul className="dropdown-menu">
+          {/* <ul className="dropdown-menu">
             <li><a className="dropdown-item" href="#">THOKKUS 10 TYPES</a></li>
     <li><a className="dropdown-item" href="#">RAJASTHANI PICKLE</a></li>
     <li><a className="dropdown-item" href="#">ANDHRA PICKLE</a></li>
      <li><a className="dropdown-item" href="#">PUNJABI PICKLE</a></li>
    </ul>
     
+        </li> */}
         </li>
 
     <li className="nav-item dropdown">
-          <Link className="nav-link dropdown-toggle fw-bold" to="/masala" role="button" data-bs-toggle="nav-link dropdown-toggle" aria-expanded="false">
+          <Link className="nav-link  fw-bold mt-2" to="/masala" role="button" data-bs-toggle="nav-link dropdown-toggle" aria-expanded="false">
             MASALAS
           </Link>
-          <ul className="dropdown-menu">
+          {/* <ul className="dropdown-menu">
             <li><a className="dropdown-item" href="#">PODIS 10 TYPES</a></li>
     <li><a className="dropdown-item" href="#">AMRITSARI MASALAS</a></li>
     <li><a className="dropdown-item" href="#">KARNATAKA MASALAS</a></li>
@@ -94,27 +97,29 @@ const Navbar = () => {
      
           </ul>
     
+        </li> */}
         </li>
 
 
-         <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         {/* <li className="nav-item dropdown">
+          <a className="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             MUKHWAS
-          </a>
-          <ul className="dropdown-menu">
+          </a> */}
+          {/* <ul className="dropdown-menu">
            <li><a className="dropdown-item" href="#">DRY PAAN 10 TYPES</a></li>
     <li><a className="dropdown-item" href="#">DIGESTIVE CHURAN</a></li>
     <li><a className="dropdown-item" href="#">MOUTH FRESHENERS MUKHWAS</a></li>
     
        </ul>
-        </li>
+        </li> */}
+        {/* </li>
 
 
          <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             REGIONAL RICE
-          </a>
-          <ul className="dropdown-menu">
+          </a> */}
+          {/* <ul className="dropdown-menu">
            <li><a className="dropdown-item" href="#">BENGALI RICE</a></li>
     <li><a className="dropdown-item" href="#">ASSAM RICE</a></li>
     <li><a className="dropdown-item" href="#">KARNATAKA RICE</a></li>
@@ -123,56 +128,68 @@ const Navbar = () => {
        <li><a className="dropdown-item" href="#">KERELA RICE</a></li>
        </ul>
        </li>
-        
+         */}
+         {/* </li> */}
 
 
-         <li className="nav-item dropdown">
+         {/* <li className="nav-item dropdown">
           <a className="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             COOKIES
-          </a>
-          <ul className="dropdown-menu">
+          </a> */}
+          {/* <ul className="dropdown-menu">
            <li><a className="dropdown-item" href="#">COOKIES</a></li>
     <li><a className="dropdown-item" href="#">RUSKS</a></li>
     <li><a className="dropdown-item" href="#">CHRISTMAS SPECIAL</a></li>
      <li><a className="dropdown-item" href="#">BIRTHDAY SPECIAL</a></li>
       <li><a className="dropdown-item" href="#">NANKHATAI</a></li>
        
-        </ul>
-        </li>
-        </ul>
-        </div>
+        </ul> */}
+        {/* </li>
+        </ul> */}
+        {/* </div> */}
 
          <div className="collapse navbar-collapse d-block-lg d-none"id="navbarNav">
           <div>
-            <ul className="navbar-nav gap-4 ">
-                <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i className="fa-regular fa-user"></i>
+            <ul className="navbar-nav gap-5 "> 
+               <li className="nav-item dropdown">
+          <a className="nav-link  fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Signup/Login
           </a>
           
 
           <ul className="dropdown-menu ">
+            
            <li><Link className="dropdown-item " data-bs-toggle="dropdown-item" data-bs-target="#Login-section" to="/Login" role="button"><i className="fa-solid fa-arrow-right-to-bracket"></i>Log In</Link></li> 
            <li><Link className="dropdown-item" data-bs-toggle="dropdown-item" data-bs-target="#create_account-section" to="/signup"><i className="fa-solid fa-user-plus"></i>Create Account</Link></li> 
            </ul>
-           </li>
-           </ul>
+           </li> 
+            </ul>
            </div>
         
-           <div className="d-flex gap-2 mt-2 ">
-             <li className="nav-link "><button className="magnifying_glass "></button></li><i className="fa-solid fa-magnifying-glass mt-1 gap-2"></i>
-             <li className="nav-link"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping "></i></Link></li>
+           <div className="d-flex gap-1 mt-3 ">
+            <li>  <Link to="/upload">
+            <i className="fa-regular fa-user user_icon ms-3 mt-1"></i>
+            </Link></li>
+            
+             <li className="nav-link "><button className="magnifying_glass "></button></li><i className="fa-solid fa-magnifying-glass mt-1 "></i>
+             <li className="nav-link"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping mg"></i></Link></li>
                 
       
             
         </div>
         </div>
+        </ul>
           
 </div>
 </div>
-        </nav>         
+</div>
+
+        </nav> 
+        </div>        
       </div> 
-      </div>
+    
+     
+      
   
     )
 };

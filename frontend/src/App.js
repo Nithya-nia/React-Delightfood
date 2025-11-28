@@ -8,7 +8,7 @@ import Signup from './Pages/Signup'
 import Masala from './Pages/Masala'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Cartpage from './Pages/Cart'
-
+import Upload from './Pages/Upload'
 
 function App() {
   return (
@@ -25,6 +25,7 @@ function App() {
       <Route path='/Signup' element={<Signup/>}/> 
       <Route path='/masala' element={<Masala/>}/>
       <Route path='/cart' element={<Cartpage/>}/>
+      <Route path='/upload' element={<Upload/>}/>
     </Routes>
     </BrowserRouter>
 

@@ -12,3 +12,6 @@
     border-color:rgba(218,7,92);
     border-radius: 5px;
 }
+.sort:hover{
+    background-color: rgb(230, 175, 197) ; 
+}

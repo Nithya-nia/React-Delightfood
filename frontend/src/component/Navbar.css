@@ -29,6 +29,7 @@
 .cart_shoping{
    border:none;
    background-color: white;
+   margin: 0;
 }
 .magnifying_glass{
   border:none;
@@ -37,6 +38,24 @@
 .ht{
   margin-left: 20px;
 }
+
+@media (min-width:786px){
+  .sweets{
+   margin-left: 150px;
+}
+}
+@media (min-width:786px){
+  .mg{
+      position:absolute;
+      top:35px;
+      margin-right: 3px;
+       color: rgba(218,7,92);
+  }
+}
+
+  .user_icon{
+    color: rgba(218,7,92);
+  }
 
   
 

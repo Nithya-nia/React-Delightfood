@@ -1,6 +1,6 @@
 import { useDispatch,useSelector } from 'react-redux'; 
 import { deleteFromCart,updateQuantity } from '../Addtocart/cartSlice'; 
-import Cart_css from '../Pages/Cart.js'
+import Cart_css from './Cart.css'
  
 const Cartpage = () => { 
     const cartitems=useSelector((state)=>state.cart.cartitems); 
@@ -37,7 +37,9 @@ your day</h6>
                     return( 
                         <div class=" container col-lg-3" key={item.id}> 
                        
-                            
+ 
+
+
   <div class="card  mt-3 ">
     <img src={item.image} class="card-img-top" alt="..."/>
     <div class="card-body text-center">
@@ -62,10 +64,7 @@ your day</h6>
 onClick={()=>{incrementCart(item.id,item.quantity)}} >+</button> 
                             </div> 
                       
-  
-                            <button className="btn-cartbutton" 
-onClick={()=>deleteCart(item)} style={{backgroundColor:'rose',border:'solid',borderColor:'rose',borderRadius:'10px',padding:'2px',}}> Delete From Cart
-</button> 
+                            <button className="btn-cartbutton" onClick={()=>deleteCart(item)}> Delete From Cart</button> 
                                 
                           </div>             
                         
