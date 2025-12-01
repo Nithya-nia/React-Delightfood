@@ -9,7 +9,7 @@ import Masala from './Pages/Masala'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import Cartpage from './Pages/Cart'
 import Upload from './Pages/Upload'
-
+import Get from './Pages/Getproduct'
 function App() {
   return (
     <>
@@ -26,6 +26,7 @@ function App() {
       <Route path='/masala' element={<Masala/>}/>
       <Route path='/cart' element={<Cartpage/>}/>
       <Route path='/upload' element={<Upload/>}/>
+      <Route path='/getproducts' element={<Get/>}/>
     </Routes>
     </BrowserRouter>
 

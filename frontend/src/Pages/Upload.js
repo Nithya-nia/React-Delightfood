@@ -18,14 +18,14 @@ const Upload = () => {
         const img=form.img.value;
         const price=form.price.value;
         const rating=form.starrating.value;
-        const Gender=form.gender.value;
-        const checkbox=form.check;
-         const check = [];
-        for (let i = 0; i < checkbox.length; i++) {
-         if (checkbox[i].checked) {
-                 check.push(checkbox[i].value);
-            }
-        }
+        // const Gender=form.gender.value;
+        // const checkbox=form.check;
+        //  const check = [];
+        // for (let i = 0; i < checkbox.length; i++) {
+        //  if (checkbox[i].checked) {
+        //          check.push(checkbox[i].value);
+        //     }
+        // }
 
 
 
@@ -35,11 +35,13 @@ const Upload = () => {
 
         const quantity=1;
 
-        if(title==="" || img==="" || price==="" || rating==="" || check.length===0)
+        if(title==="" || img==="" || price==="" || rating===""
+            // check.length===0
+        )
         {
             toast.warn('Fill All Required fields  ');
         }else{
-            const foods={title,img,rating,price,Gender,quantity,check};
+            const foods={title,img,rating,price,quantity};
             // console.log(foods,"foods in object ");
             
             fetch('http://localhost:6001/uploadproduct',{
@@ -52,7 +54,7 @@ const Upload = () => {
             .then((data)=>{
                 toast.success('added successfully');
                 form.reset();
-                // window.location.href="/update"
+                window.location.href="/getproducts"
             }
             )
 
@@ -89,7 +91,7 @@ const Upload = () => {
                 <label ><b>Rating</b></label><br/>
                 <input type='number' name='starrating' className='upload3_css form-control'/><br/>
             </div>
-            <div class="upload4 mt-3">
+            {/* <div class="upload4 mt-3">
                 <label ><b>Gender</b></label><br/>
               
                     <label><b>Male</b></label>
@@ -104,7 +106,7 @@ const Upload = () => {
                    <input type='checkbox' name='check'  value="benz" className='upload3_css '/><br/>
                     <label><b>volvo</b></label>
                    <input type='checkbox' name='check' value="volvo" className='upload3_css '/><br/>
-            </div>
+            </div> */}
 
             
                 
