@@ -27,6 +27,30 @@ async function run() {
    const productcollection=client.db("delight").collection("products")
    const userscollection=client.db("delight").collection("users")
 
+    // app.post('/createaccount', async (req, res) => {
+    //   try {
+    //     const { firstname, lastname,email,password } = req.body;
+
+
+    //     const existingUser = await usersCollection.findOne({ email });
+    //     if (existingUser) {
+    //       return res.status(400).json({ message: "User already exists" });                                                                                                                                
+    //     }
+
+
+    //     const hashedPassword = await bcrypt.hash(password, 10);
+    //     await usersCollection.insertOne({ firstname,lastname,email, password: hashedPassword });
+
+
+    //     res.status(201).json({ message: "User registered successfully" });
+    //     console.log("User registered:", email);
+    //   } catch (error) {
+    //     res.status(500).json({ message: "Error registering user", error });
+    //   }
+    // });
+
+
+
    app.post("/uploadproduct",async(req,res)=>{
     const data=req.body
     // console.log(data)
@@ -94,3 +118,189 @@ run().catch(console.dir);
  app.listen(port,()=>{ 
     console.log("running on port number",port)
 })
+
+
+
+
+// const express = require('express');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+// const cors = require('cors');
+const dotenv=require("dotenv")
+dotenv.config()
+const { OAuth2Client } = require("google-auth-library");
+
+
+// const { MongoClient, ServerApiVersion } = require('mongodb');
+
+
+const Oauthclient = new OAuth2Client(process.env.CLIENT_ID);
+
+
+// const app = express();
+// const port = 6100;
+
+
+
+app.use(express.json());
+app.use(cors());
+
+
+const secretKey = 'delightfood';
+
+
+// /= "mongodb+srv://kowsalyaaitech:test@cluster0.ltjw8ex.mongodb.net/?appName=Cluster0";
+// const client = new MongoClient(uri, {
+//   serverApi: {
+//     vers/ MongoDB connection
+// const uri ion: ServerApiVersion.v1,
+//     strict: true,
+//     deprecationErrors: true,
+//   }
+// });
+
+
+let usersCollection;
+
+
+async function connectDB() {
+  try {
+    await client.connect();
+    const usersCollection = client.db("delight").collection("users");
+   
+
+
+app.post('/createaccount', async (req, res) => {
+      try {
+        const {firstname,lastname,email,password } = req.body;
+
+
+        const existingUser = await usersCollection.findOne({ email });
+        if (existingUser) {
+          return res.status(400).json({ message: "User already exists" });                                                                                                                                
+        }
+
+
+        const hashedPassword = await bcrypt.hash(password, 10);
+        await usersCollection.insertOne({firstname,lastname,email,password: hashedPassword });
+
+
+        res.status(201).json({ message: "User registered successfully" });
+        console.log("User registered:", email);
+      } catch (error) {
+        res.status(500).json({ message: "Error registering user", error });
+      }
+    });
+
+
+   
+    app.post('/loginpage', async (req, res) => {
+        try {
+          const { email, password } = req.body;
+
+
+          const user = await usersCollection.findOne({ email});
+          if (!user) {
+            return res.status(401).json({ message: "User not found. Please register." });
+          }
+
+
+          const isValidPassword = await bcrypt.compare(password, user.password);
+          if (!isValidPassword) {
+            return res.status(401).json({ message: "Invalid password" });
+          }
+
+
+          const token = jwt.sign({ email }, secretKey, { expiresIn: '10d' });
+          res.json({ token });
+          console.log("User logged in:", email);
+        } catch (error) {
+          res.status(500).json({ message: "Error logging in", error });
+        }
+    });
+
+
+    app.post('/verifyToken', (req, res) => {
+       console.log("testing")
+        const token = req.headers.authorization?.split(' ')[1];
+        console.log(token,"token received")
+
+        if (!token) {
+          return res.status(401).json({ valid: false, message: 'No token provided' });
+        }
+
+
+        jwt.verify(token, secretKey, (err, decoded) => {
+          if (err) {
+            // console.log(err)
+            return res.status(401).json({ valid: false, message: 'Invalid or expired token' });
+          }
+          res.json({ valid: true, username: decoded.username });
+        });
+});
+
+
+app.post("/google-login", async (req, res) => {
+  try {
+    const { token } = req.body;
+    const ticket = await Oauthclient.verifyIdToken({
+      idToken: token,
+      audience:process.env.CLIENT_ID,
+    });
+
+
+    const payload = ticket.getPayload();
+    const username = payload?.email; // use email as username
+    const name = payload?.name;
+    const picture = payload?.picture;
+
+
+    // Check if user exists
+    let user = await usersCollection.findOne({ username });
+
+
+    if (!user) {
+      // If user doesn't exist, create a new one
+      const newUser = { username, password: null, name, picture, fromGoogle: true };
+      await usersCollection.insertOne(newUser);
+      console.log("New Google user created:", username);
+    }
+
+
+    // Create your own JWT (so your app uses one token type)
+    const myToken = jwt.sign({ username:name }, secretKey, { expiresIn: "1h" });
+
+
+    res.json({ token: myToken });
+  } catch (err) {
+    console.error("Google Login Error:", err);
+    res.status(400).json({ message: "Invalid Google token" });
+  }
+});
+
+
+    console.log("Connected to MongoDB and 'users' collection ready.");
+  } catch (err) {
+    console.error("MongoDB connection failed:", err);
+  }
+}
+connectDB();
+
+
+
+
+
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
+
+
+
+
+
+
+
+
+
+
