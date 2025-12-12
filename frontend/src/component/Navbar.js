@@ -2,8 +2,14 @@ import React from 'react'
 import css_navbar from './Navbar.css'
 import img from "../Images/Assests/DF_logo.png"
 import {Link} from 'react-router-dom'
+import { logout } from '../auth';
 
 const Navbar = () => {
+
+  const Logout=()=>{
+    logout()
+    window.location.href="/Login"
+  }
   return (
     <div className='Navbar'>
      <div id="index-section">
@@ -17,7 +23,7 @@ const Navbar = () => {
                <button className="nav-link d-block d-lg-none magnifying_glass"><i className="fa-solid fa-magnifying-glass"></i></button>
                </div>   
                <div className="col-4-sm ms-2">
-              <a className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" href="index.html"><img src={img} height="50px" width="60px"/></a>
+              <Link to="/" className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" ><img src={img} height="50px" width="60px"/></Link>
               </div>
              <div className="d-flex flex-row gap-2">
               <a className="nav-link dropdown-toggle fw-bold d-block d-lg-none  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -163,6 +169,12 @@ const Navbar = () => {
            <li><Link className="dropdown-item" data-bs-toggle="dropdown-item" data-bs-target="#create_account-section" to="/signup"><i className="fa-solid fa-user-plus"></i>Create Account</Link></li> 
            </ul>
            </li> 
+               <li className="nav-item dropdown">
+          <div  onClick={()=>Logout()}>
+           Logout
+          </div>
+          
+           </li>
             </ul>
            </div>
         

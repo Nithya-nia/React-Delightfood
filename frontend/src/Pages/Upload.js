@@ -13,7 +13,7 @@ const Upload = () => {
         event.preventDefault();
         
         const form=event.target;
-
+ 
         const title=form.title.value;
         const img=form.img.value;
         const price=form.price.value;
@@ -78,7 +78,7 @@ const Upload = () => {
             </div>
 
             <div class="upload1 mt-3">
-                <label ><b class="">Image Link</b></label><br/>
+                <label ><b class="">Image Address</b></label><br/>
                 <input type='img' name="img" className='upload1_css form-control'/>
             </div>
               

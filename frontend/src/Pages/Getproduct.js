@@ -48,7 +48,7 @@ const Get= () => {
                     <td  style={{border:"solid "}}>{Item.quantity}</td>
                     <td  style={{border:"solid "}}> 
                     <button className='table3' placeholder='delete'onClick={()=>DeleteItems(Item._id)}>delete</button>
-                    <Link to={`/edit/${Item._id}`}><button><FiEdit /></button></Link> 
+                    <Link to={`/Editproducts/${Item._id}`}><button><FiEdit /></button></Link> 
                     </td>
                     </tr>  
             ))}
