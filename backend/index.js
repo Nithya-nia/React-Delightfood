@@ -1,11 +1,13 @@
 const express=require("express")
 const cors=require("cors")
 
+
 const port=6001
 const app=express()
 
 app.use(cors())
 app.use(express.json())
+
 
 const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
 const uri = "mongodb+srv://imnithyania_db_user:delight@cluster0.ed4hgki.mongodb.net/?appName=Cluster0";
@@ -57,13 +59,17 @@ async function run() {
     const result=await productcollection.insertOne(data)
     res.send(result)
    }
-   )
+)
+
+
    app.post("/uploadusers",async(req,res)=>{
     const data=req.body
     const result=await userscollection.insertOne(data)
     res.send(result)
    }
    )
+
+   
    app.get("/getproduct",async(req,res)=>{
     const data=await productcollection.find();
     const result=await data.toArray()
@@ -168,6 +174,10 @@ async function connectDB() {
     await client.connect();
     const usersCollection = client.db("delight").collection("users");
    
+app.post("/uploadproduct", (req, res) => {
+  console.log(req.body);
+  res.status(201).json({ message: "Product uploaded" });
+});
 
 
 app.post('/createaccount', async (req, res) => {
@@ -183,8 +193,6 @@ app.post('/createaccount', async (req, res) => {
 
         const hashedPassword = await bcrypt.hash(password, 10);
         await usersCollection.insertOne({firstname,lastname,email,password: hashedPassword });
-
-
         res.status(201).json({ message: "User registered successfully" });
         console.log("User registered:", email);
       } catch (error) {
@@ -285,22 +293,6 @@ app.post("/google-login", async (req, res) => {
   }
 }
 connectDB();
-
-
-
-
-
-
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
-
-
-
-
-
-
-
-
-
-
