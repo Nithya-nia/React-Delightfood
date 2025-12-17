@@ -12,6 +12,8 @@ import Upload from './Pages/Upload'
 import Get from './Pages/Getproduct'
 import Snackedit from './Pages/Edit'
 import ProtectedRoute from './Pages/ProctedRoute'
+import Form from './Pages/Validation'
+import Fetchfile from './Pages/Singlecrud'
 function App() {
   return (
     <>
@@ -31,13 +33,17 @@ function App() {
         </ProtectedRoute>
        }/>
       <Route path='/Snacks' element={
-         
-          <Snacks/>
+          <ProtectedRoute >
+               <Snacks/>
+          </ProtectedRoute>
+       
          
         }/>
       <Route path='/Pickel' element={
+         <ProtectedRoute >
+            <Pickel/>
+         </ProtectedRoute>
         
-          <Pickel/>
         
         }/>
       <Route path='/Login' element={
@@ -51,8 +57,10 @@ function App() {
         
         }/> 
       <Route path='/masala' element={
-       
+       <ProtectedRoute >
           <Masala/>
+       </ProtectedRoute>
+          
           
         }/>
       <Route path='/cart' element={
@@ -63,6 +71,8 @@ function App() {
       <Route path='/upload' element={<Upload/>}/>
       <Route path='/getproducts' element={<Get/>}/>
       <Route path='/Editproducts/:id' element={<Snackedit/>}/>
+      <Route path='/validation' element={<Form/>}/>
+      <Route path='/singlecrud' element={<Fetchfile/>}/>
     </Routes>
     </BrowserRouter>
 

@@ -4,7 +4,7 @@ import { ToastContainer ,toast } from 'react-toastify';
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer';
 // import { useEffect } from 'react';
-
+import axios from 'axios';
 const Upload = () => {
 
     
@@ -44,20 +44,30 @@ const Upload = () => {
             const foods={title,img,rating,price,quantity};
             // console.log(foods,"foods in object ");
             
-            fetch('http://localhost:6001/uploadproduct',{
-                method:"POST",
-                headers:{
-                    'Content-Type':'application/json'
-                },
-                body:JSON.stringify(foods),
-            })
-            .then((data)=>{
-                toast.success('added successfully');
-                form.reset();
-                window.location.href="/getproducts"
-            }
-            )
+            // fetch('http://localhost:6001/uploadproduct',{
+            //     method:"POST",
+            //     headers:{
+            //         'Content-Type':'application/json'
+            //     },
+            //     body:JSON.stringify(foods),
+            // })
+            // .then((data)=>{
+            //     toast.success('added successfully');
+            //     form.reset();
+            //     window.location.href="/getproducts"
+            // }
+            // )
 
+            axios.post("http://localhost:6001/uploadproduct", foods)
+            console.log(foods)
+            
+              .then((res)=> {
+                 toast.success('added successfully');
+                form.reset();
+                window.location.href="/"
+                })
+             .catch(err => console.error(err));
+  
         }
 
         }
