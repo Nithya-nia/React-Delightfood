@@ -26,13 +26,11 @@ const Navbar = () => {
               <Link to="/" className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" ><img src={img} height="50px" width="60px"/></Link>
               </div>
              <div className="d-flex flex-row gap-2">
-              <a className="nav-link dropdown-toggle fw-bold d-block d-lg-none  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i className="fa-regular fa-user ht"></i>
-          </a>
-          <ul className="dropdown-menu user"> 
-           <li><a className="dropdown-item " href="#"/></li> <li><i className="fa-solid fa-arrow-right-to-bracket"></i>Log In</li>
-           <li><a className="dropdown-item" href="#"/></li><li><i className="fa-solid fa-user-plus"></i>Create Account</li>
-         </ul>
+             
+          <Link to="/Login" className="nav-link  fw-bold d-block d-lg-none  " role="button"  aria-expanded="false">
+          <i className="fa-regular fa-user ht"></i>
+          </Link>
+        
 
              <li className="nav-link d-block d-lg-none"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping user_icon"></i></Link></li>
         
