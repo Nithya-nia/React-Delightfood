@@ -26,7 +26,7 @@ const Navbar = () => {
               <Link to="/" className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" ><img src={img} height="50px" width="60px"/></Link>
               </div>
              <div className="d-flex flex-row gap-2">
-             
+              {/* <a className="nav-link dropdown-toggle fw-bold d-block d-lg-none  " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> */}
           <Link to="/Login" className="nav-link  fw-bold d-block d-lg-none  " role="button"  aria-expanded="false">
           <i className="fa-regular fa-user ht"></i>
           </Link>
