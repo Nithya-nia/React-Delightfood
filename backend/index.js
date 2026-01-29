@@ -155,15 +155,7 @@ app.use(cors());
 const secretKey = 'delightfood';
 
 
-// /= "mongodb+srv://kowsalyaaitech:test@cluster0.ltjw8ex.mongodb.net/?appName=Cluster0";
-// const client = new MongoClient(uri, {
-//   serverApi: {
-//     vers/ MongoDB connection
-// const uri ion: ServerApiVersion.v1,
-//     strict: true,
-//     deprecationErrors: true,
-//   }
-// });
+
 
 
 let usersCollection;
@@ -219,7 +211,7 @@ app.post('/createaccount', async (req, res) => {
           }
 
 
-          const token = jwt.sign({ email }, secretKey, { expiresIn: '10d' });
+          const token = jwt.sign({ email }, secretKey, { expiresIn: '100d' });
           res.json({ token });
           console.log("User logged in:", email);
         } catch (error) {
