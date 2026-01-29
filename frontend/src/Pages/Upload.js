@@ -58,10 +58,10 @@ const Upload = () => {
             // }
             // )
 
-            axios.post("http://localhost:6001/uploadproduct", foods)
-            console.log(foods)
-            
-              .then((res)=> {
+            axios.get("http://localhost:6001/uploadproduct", foods)
+            // console.log(foods)
+            .then((res)=> {
+                console.log(res.data)
                  toast.success('added successfully');
                 form.reset();
                 window.location.href="/"
@@ -80,7 +80,7 @@ const Upload = () => {
               <div class="card upload6">
          <div class="card-body upload5">
         <form class="justify-content-center" onSubmit={handleSubmit} >
-            <h1 class="text-center">Upload</h1>
+            <h1 class="text-center">Upload New Products</h1>
             <div class="d-flex flex-column align-items-lg-center ms-3">
             <div class="upload0 mt-5">
                 <label ><b class=""> Product Title </b></label><br/>
@@ -122,7 +122,7 @@ const Upload = () => {
                 
 
             <div class="upload4">
-                <button type="submit" class="btn btn-primary">upload</button>
+                <button type="submit" class="add-to-cart-btn btn">upload</button>
                 
             </div>
 </div>

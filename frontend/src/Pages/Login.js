@@ -85,7 +85,7 @@ const Login = () => {
     <input type="password" class="form-control input-lg" name="password" placeholder="password" id="example"/>
   </div>
  <div class="col">
-  <button type="submit" class="btn ">Log In</button>
+  <button type="submit" class="add-to-cart-btn btn">Log In</button>
 </div>
 </form>
 </div>

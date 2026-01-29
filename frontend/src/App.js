@@ -22,10 +22,10 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={
-        <ProtectedRoute>
+        
         <Home/>
 
-        </ProtectedRoute>
+        
         }></Route>
       <Route path='/sweets' element={
         <ProtectedRoute >

@@ -90,7 +90,7 @@ const Signup = () => {
     <label class="form-check-label" for="exampleCheck1">Email me with news and offers</label>
   </div>
  
-  <button type="submit" class="btn ">Create</button>
+  <button type="submit" class="add-to-cart-btn btn">Create Account</button>
   </form>
 </div>
   <div class="  d-flex flex-column align-items-sm-center align-items-lg-center ">

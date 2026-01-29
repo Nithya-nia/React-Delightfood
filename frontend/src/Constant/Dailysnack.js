@@ -9,7 +9,7 @@ const Dailysnack=[
         image:bikaneri,
         title:"Bikaneri Bhujia 300g",
         star:[1,1,1,1,1],
-         quantity:1,
+        quantity:1,
         rupees:"Rs.299.00",
         muted:"Rs.300.00",
         button:"Add to Cart",

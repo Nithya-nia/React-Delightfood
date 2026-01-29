@@ -29,7 +29,7 @@ const Sweet = () => {
     <i class="fa-solid fa-arrow-down-wide-short"></i>Sort by
   </div>
   <div class="dropdown pt-3 ms-2">
-  <button class="btn  dropdown-toggle sort" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+  <button class="add-to-cart-btn btn  dropdown-toggle sort" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Featured
   </button>
   <ul class="dropdown-menu sort_menu">

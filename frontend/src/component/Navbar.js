@@ -17,10 +17,10 @@ const Navbar = () => {
     <nav>
     <div className="navbar navbar-light  navbar-expand-lg">
       <div className="container d-flex flex-row ">
-        <div className=" col-4-sm d-flex gap-2">
+        <div className=" col-4-sm d-flex gap-1">
                <button  className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span className="navbar-toggler-icon"></span></button>
 
-               <button className="nav-link d-block d-lg-none magnifying_glass"><i className="fa-solid fa-magnifying-glass"></i></button>
+               {/* <button className="nav-link d-block d-lg-none magnifying_glass"><i className="fa-solid fa-magnifying-glass"></i></button> */}
                </div>   
                <div className="col-4-sm ms-2">
               <Link to="/" className="navbar-brand d-block" role="button" data-bs-toggle="navbar-brand" data-bs-target="#index-section" ><img src={img} height="50px" width="60px"/></Link>
@@ -38,11 +38,11 @@ const Navbar = () => {
         
             </div>
 
-            <div className="collapse navbar-collapse ms-5" id="navbarNav">
+            <div className="collapse navbar-collapse ms-2 " id="navbarNav">
                
-                <ul className= "navbar-nav sweets pt-2 gap-5">
+                <ul className= "navbar-nav sweets gap-4 ">
                    <li className="nav-item dropdown">
-          <Link className="nav-link  fw-bold mt-2" to="/Sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false" >
+          <Link className="nav-link  fw-bold mt-2 " to="/Sweets" role="button" data-bs-toggle="nav-link dropdown-toggle" data-bs-target="#snacks-section" aria-expanded="false" >
             SWEETS
             </Link>
           {/* <ul className="dropdown-menu">
@@ -158,7 +158,7 @@ const Navbar = () => {
           <div>
             <ul className="navbar-nav gap-5 "> 
                <li className="nav-item dropdown">
-          <a className="nav-link  fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a className="nav-link mt-2 fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Signup/Login
           </a>
           
@@ -169,22 +169,22 @@ const Navbar = () => {
            <li><Link className="dropdown-item" data-bs-toggle="dropdown-item" data-bs-target="#create_account-section" to="/signup"><i className="fa-solid fa-user-plus"></i>Create Account</Link></li> 
            </ul>
            </li> 
-               <li className="nav-item dropdown">
+               <li className="nav-item dropdown mt-3">
           <div  onClick={()=>Logout()}>
-           Logout
+          <b>Logout</b> 
           </div>
           
            </li>
             </ul>
            </div>
         
-           <div className="d-flex gap-1 mt-3 ">
+           <div className="d-flex gap-4 mt-2 ms-2">
             <li>  <Link to="/upload">
             <i className="fa-regular fa-user user_icon ms-3 mt-1"></i>
             </Link></li>
             
-             <li className="nav-link "><button className="magnifying_glass "></button></li><i className="fa-solid fa-magnifying-glass mt-1 "></i>
-             <li className="nav-link"><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping mg"></i></Link></li>
+             {/* <li className="nav-link "><button className="magnifying_glass "></button></li><i className="fa-solid fa-magnifying-glass mt-1 "></i> */}
+             <li className="nav-link "><Link to="/cart" className="magnifying_glass"><i className="fa-solid fa-cart-shopping mg"></i></Link></li>
                 
       
             
