@@ -3,12 +3,14 @@ import css_navbar from './Navbar.css'
 import img from "../Images/Assests/DF_logo.png"
 import {Link} from 'react-router-dom'
 import { logout } from '../auth';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
 
+  const navigate = useNavigate();
   const Logout=()=>{
     logout()
-    window.location.href="/Login"
+    navigate("/Login")
   }
   return (
     <div className='Navbar'>
