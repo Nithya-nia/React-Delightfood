@@ -27,7 +27,7 @@ const Signup = () => {
                     const foods={firstname,lastname,email,password};
                    
                     
-                    fetch('http://https://delight-backend.onrender.com/createaccount',{
+                   fetch("https://delight-backend-zncy.onrender.com/createaccount", {
                         method:"POST",
                         headers:{
                             'Content-Type':'application/json'
