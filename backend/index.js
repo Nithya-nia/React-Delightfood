@@ -10,8 +10,8 @@ app.use(express.json())
 
 
 const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
-const uri = "mongodb+srv://imnithyania_db_user:delight@cluster0.ed4hgki.mongodb.net/?appName=Cluster0"
-
+// const uri = "mongodb+srv://imnithyania_db_user:delight@cluster0.ed4hgki.mongodb.net/?appName=Cluster0"
+const uri = process.env.MONGO_URI;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -64,7 +64,7 @@ async function run() {
 
    app.post("/uploadusers",async(req,res)=>{
     const data=req.body
-    const result=await userscollection.insertOne(data)
+    const result=await usersCollection.insertOne(data)
     res.send(result)
    }
    )
@@ -83,7 +83,7 @@ async function run() {
     res.send(data)
    })
      app.get("/getuser",async(req,res)=>{
-      const data=await userscollection.find();
+      const data=await usersCollection.find();
       const result=await data.toArray()
       res.send(result)
    })
@@ -166,7 +166,7 @@ async function connectDB() {
     await client.connect();
     const usersCollection = client.db("delight").collection("users");
    
-app.post("/uploadproduct", (req, res) => {
+app.post("/uploadproduct",async(req, res) => {
   console.log(req.body);
   res.status(201).json({ message: "Product uploaded" });
 });
@@ -284,7 +284,7 @@ app.post("/google-login", async (req, res) => {
     console.error("MongoDB connection failed:", err);
   }
 }
-connectDB();
+
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
