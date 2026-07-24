@@ -24,7 +24,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
+    // await client.connect();
 
    const productcollection=client.db("delight").collection("products")
    const usersCollection=client.db("delight").collection("users")
@@ -164,7 +164,7 @@ let usersCollection;
 async function connectDB() {
   try {
     await client.connect();
-    const usersCollection = client.db("delight").collection("users");
+     usersCollection = client.db("delight").collection("users");
    
 app.post("/uploadproduct",async(req, res) => {
   console.log(req.body);
@@ -194,7 +194,7 @@ app.post('/createaccount', async (req, res) => {
 
 
    
-    app.post('/loginpage', async (req, res) => {
+    app.post('/loginpage',async (req, res) => {
         try {
           const { email, password } = req.body;
 
@@ -284,7 +284,7 @@ app.post("/google-login", async (req, res) => {
     console.error("MongoDB connection failed:", err);
   }
 }
-
+connectDB();
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
