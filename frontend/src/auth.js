@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // const API_URL = "http://https://delight-backend.onrender.com/";
 // const API_URL = process.env.REACT_APP_API_URL;
-const API_URL = "https://delight-backend-zncy.onrender.com/";
+const API_URL = "https://delight-backend-zncy.onrender.com";
 
 
 
@@ -44,7 +44,7 @@ export const verifyToken = async () => {
 
   try {
     const response = await axios.post(
-      `${API_URL}verifyToken`,
+      `${API_URL}/verifyToken`,
       {},
       {
         headers: { Authorization: `Bearer ${token}` },
