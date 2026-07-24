@@ -25,43 +25,51 @@ const Login = () => {
                     const foods={email,password};
                    
                     
-                    fetch('https://delight-backend-zncy.onrender.com/loginpage',{
-                        method:"POST",
-                        headers:{
-                            'Content-Type':'application/json'
-                        },
-                        body:JSON.stringify(foods),
-                    })
-                     .then((res)=>res.json())
-                    .then((data)=>{
-                      if(data.message=== "User not found. Please register."){
-                          toast.error(data.message);
-                        form.reset();
-                      }
-                      else if(data.message==="Invalid password"){
-                        toast.error(data.message);
-                        form.reset();
-                        
-                      }
-                    
+                  fetch('https://delight-backend-zncy.onrender.com/loginpage',{
+    method:"POST",
+    headers:{
+        'Content-Type':'application/json'
+    },
+    body:JSON.stringify(foods),
+})
+.then((res)=>res.json())
+.then((data)=>{
 
-                      else{
-                        toast.success(data.message);
-                        form.reset();
-                        localStorage.setItem("token",JSON.stringify(data.token))
-                        window.location.href="/"
-                      }
-                    }
-                    )
-                  
-                        
-                       
-                   
-        
-                }
-        
-                }
-              
+    if(data.message === "User not found. Please register"){
+
+        toast.error(data.message);
+        form.reset();
+
+    }
+    else if(data.message === "Invalid password"){
+
+        toast.error(data.message);
+        form.reset();
+
+    }
+    else{
+
+        toast.success(data.message);
+
+        form.reset();
+
+        localStorage.setItem(
+            "token",
+            data.token
+        );
+
+        window.location.href="/";
+    }
+
+})
+.catch((error)=>{
+
+    console.log(error);
+
+    toast.error("Backend server not reachable");
+
+});
+                }}
 
   return (
 <>
