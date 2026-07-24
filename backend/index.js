@@ -2,7 +2,7 @@ const express=require("express")
 const cors=require("cors")
 
 
-const port=6001
+const port = process.env.PORT || 6001;
 const app=express()
 
 app.use(cors())
@@ -10,7 +10,7 @@ app.use(express.json())
 
 
 const { MongoClient, ServerApiVersion,ObjectId } = require('mongodb');
-const uri = "mongodb+srv://imnithyania_db_user:delight@cluster0.ed4hgki.mongodb.net/?appName=Cluster0";
+const uri = "mongodb+srv://imnithyania_db_user:delight@cluster0.ed4hgki.mongodb.net/?appName=Cluster0"
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -27,7 +27,7 @@ async function run() {
     await client.connect();
 
    const productcollection=client.db("delight").collection("products")
-   const userscollection=client.db("delight").collection("users")
+   const usersCollection=client.db("delight").collection("users")
 
     // app.post('/createaccount', async (req, res) => {
     //   try {
@@ -121,9 +121,9 @@ async function run() {
 }
 run().catch(console.dir);
 
- app.listen(port,()=>{ 
-    console.log("running on port number",port)
-})
+//  app.listen(port,()=>{ 
+//     console.log("running on port number",port)
+// })
 
 
 
