@@ -44,7 +44,7 @@ const Upload = () => {
             const foods={title,img,rating,price,quantity};
             // console.log(foods,"foods in object ");
             
-            // fetch('http://localhost:6001/uploadproduct',{
+            // fetch('http://https://delight-backend.onrender.com/uploadproduct',{
             //     method:"POST",
             //     headers:{
             //         'Content-Type':'application/json'
@@ -58,7 +58,7 @@ const Upload = () => {
             // }
             // )
 
-            axios.get("http://localhost:6001/uploadproduct", foods)
+            axios.get("http://https://delight-backend.onrender.com/uploadproduct", foods)
             // console.log(foods)
             .then((res)=> {
                 console.log(res.data)

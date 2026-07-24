@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 
-const API_URL = "http://localhost:6001/";
+// const API_URL = "http://https://delight-backend.onrender.com/";
+// const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = "https://delight-backend-zncy.onrender.com";
 
 
 
@@ -34,21 +36,25 @@ const API_URL = "http://localhost:6001/";
 export const verifyToken = async () => {
 
   const token = localStorage.getItem('token');
-  console.log(token,"token received")
-  const data=JSON.parse(token)
-  if (!token) return { valid: false };
+  console.log(token, "token received");
 
+  if (!token || token === "undefined") {
+    return { valid: false };
+  }
 
   try {
-    const response = await axios.post(`${API_URL}verifyToken`,{},{
-        headers: { Authorization:`Bearer ${data}` },
+    const response = await axios.post(
+      `${API_URL}verifyToken`,
+      {},
+      {
+        headers: { Authorization: `Bearer ${token}` },
       }
     );
 
+    return response.data;
 
-    return response.data; // { valid: true, username: 'user1' }
-  } catch(error) {
-    console.log(error)
+  } catch (error) {
+    console.log(error);
     localStorage.removeItem('token');
     return { valid: false };
   }

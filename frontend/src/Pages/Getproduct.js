@@ -8,14 +8,14 @@ const Get= () => {
    const[ProductItems,setProductsItems]=useState([]);
 
   useEffect(()=>{
-      fetch(`http://localhost:6001/getproduct`)
+      fetch(`http://https://delight-backend.onrender.com/getproduct`)
       .then((res)=>res.json())
       .then((data)=>
           setProductsItems(data))
   },[])
   
    const DeleteItems=(id)=>{
-    fetch(`http://localhost:6001/deletesingleproduct/${id}`,{
+    fetch(`http://https://delight-backend.onrender.com/deletesingleproduct/${id}`,{
       method:"DELETE",})
       .then((res)=>res.json())
       .then((data)=>{

@@ -20,14 +20,14 @@ const Signup = () => {
         
         
         
-                if(firstname===" " || lastname===" " || email===""|| password==="")
+                if(firstname===" " || lastname===" " || email===" "|| password===" ")
                 {
                     toast.warn('Fill All  fields  ');
                 }else{
                     const foods={firstname,lastname,email,password};
                    
                     
-                    fetch('http://localhost:6001/createaccount',{
+                    fetch('http://https://delight-backend.onrender.com/createaccount',{
                         method:"POST",
                         headers:{
                             'Content-Type':'application/json'

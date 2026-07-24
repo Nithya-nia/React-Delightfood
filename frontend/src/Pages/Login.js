@@ -25,7 +25,7 @@ const Login = () => {
                     const foods={email,password};
                    
                     
-                    fetch('http://localhost:6001/loginpage',{
+                    fetch('http://https://delight-backend.onrender.com/loginpage',{
                         method:"POST",
                         headers:{
                             'Content-Type':'application/json'

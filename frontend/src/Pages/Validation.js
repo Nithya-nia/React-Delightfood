@@ -6,7 +6,6 @@ const Form= () => {
         username:"",
         email:"",
         password:"",
-    
       })
 
       const[error,setError]=useState({})

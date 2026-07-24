@@ -10,7 +10,7 @@ const Snackedit = () => {
     const [productsItems,setproductsItems]=useState ({})
 
     useEffect(()=>{
-     fetch(`http://localhost:6001/getsingleproduct/${id}`)
+     fetch(`http://https://delight-backend.onrender.com/getsingleproduct/${id}`)
        .then((res)=>res.json())
        .then((data)=>setproductsItems(data))
       },[])
@@ -26,7 +26,7 @@ const Snackedit = () => {
         const quantity=1
     const foods={title,img,rating,price,quantity};
 
-    fetch(`http://localhost:6001/editsingleproduct/${id}`,{
+    fetch(`http://https://delight-backend.onrender.com/editsingleproduct/${id}`,{
         method:"PATCH",
         headers:{
             'content-type':'application/json'

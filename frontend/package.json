@@ -51,7 +51,6 @@
     ]
   },
   "devDependencies": {
-    "baseline-browser-mapping": "^2.9.19",
     "postcss-loader": "^8.2.0",
     "postcss-preset-env": "^10.4.0",
     "postcss-pseudo-class-any-link": "^10.0.1"
