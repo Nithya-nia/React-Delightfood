@@ -284,7 +284,12 @@ app.post("/google-login", async (req, res) => {
     console.error("MongoDB connection failed:", err);
   }
 }
+app.get("/",(req,res)=>{
+    res.send("Delight Backend Running");
+});
+
 connectDB();
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });
+
