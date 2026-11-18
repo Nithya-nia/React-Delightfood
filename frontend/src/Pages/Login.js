@@ -18,9 +18,9 @@ const Login = () => {
         
         
         
-                if(email==="" || password==="" )
+                if(email===" " || password===" ")
                 {
-                    toast.warn('Fill All Required fields  ');
+                    toast.warn('Fill All Required fields');
                 }else{
                     const foods={email,password};
                    
